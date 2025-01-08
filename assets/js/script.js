@@ -164,17 +164,6 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 });
 // <!-- tilt js effect ends -->
 
-
-// pre loader start
-// function loader() {
-//     document.querySelector('.loader-container').classList.add('fade-out');
-// }
-// function fadeOut() {
-//     setInterval(loader, 500);
-// }
-// window.onload = fadeOut;
-// pre loader end
-
 // disable developer mode
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
@@ -214,13 +203,6 @@ const srtop = ScrollReveal({
     duration: 1000,
     reset: true
 });
-
-/* SCROLL ABOUT */
-// srtop.reveal('.about .content h3', { delay: 200 });
-// srtop.reveal('.about .content .tag', { delay: 200 });
-// srtop.reveal('.about .content p', { delay: 200 });
-// srtop.reveal('.about .content .box-container', { delay: 200 });
-// srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
