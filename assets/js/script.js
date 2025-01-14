@@ -143,14 +143,87 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 });
 // <!-- tilt js effect ends -->
 
-window.addEventListener('resize', function() {
-    const navbar = document.querySelector('.navbar');
+document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
     const menuBtn = document.querySelector('#menu');
-    if (window.innerWidth > 768) {
-      navbar.classList.remove('nav-toggle');
-      menuBtn.classList.remove('fa-times');
+    const navbar = document.querySelector('.navbar');
+    let isMenuOpen = false;
+
+    // Initialize menu icon if it doesn't exist
+    if (!menuBtn.classList.contains('fas')) {
+        menuBtn.classList.add('fas', 'fa-bars');
     }
-  });
+
+    // Menu button click handler
+    menuBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        isMenuOpen = !isMenuOpen;
+        
+        // Toggle menu icon
+        menuBtn.classList.toggle('fa-bars');
+        menuBtn.classList.toggle('fa-times');
+        
+        // Toggle navigation menu
+        navbar.classList.toggle('nav-toggle');
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (isMenuOpen && !navbar.contains(e.target) && !menuBtn.contains(e.target)) {
+            isMenuOpen = false;
+            menuBtn.classList.add('fa-bars');
+            menuBtn.classList.remove('fa-times');
+            navbar.classList.remove('nav-toggle');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Prevent clicks inside navbar from closing it
+    navbar.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    // Handle navigation link clicks
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Get the target section
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                // Scroll to section
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            // Close menu
+            if (window.innerWidth <= 768) {
+                isMenuOpen = false;
+                menuBtn.classList.add('fa-bars');
+                menuBtn.classList.remove('fa-times');
+                navbar.classList.remove('nav-toggle');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && isMenuOpen) {
+            isMenuOpen = false;
+            menuBtn.classList.add('fa-bars');
+            menuBtn.classList.remove('fa-times');
+            navbar.classList.remove('nav-toggle');
+            document.body.style.overflow = '';
+        }
+    });
+});
 
 // disable developer mode
 document.onkeydown = function (e) {

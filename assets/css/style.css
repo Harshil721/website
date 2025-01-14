@@ -173,13 +173,54 @@ header.scrolled {
 .navbar ul li a.active {
   color: #9cb5be;
 }
-
 #menu {
   font-size: 2rem;
   cursor: pointer;
   color: #fff;
   display: none;
   z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: block !important;  /* Force display of menu icon */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 4.8rem;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - 4.8rem);
+    background-color: #3d4095;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .navbar.nav-toggle {
+    right: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
 }
 
 #menu:hover {
