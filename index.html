@@ -12,11 +12,12 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+  
   <title>Harshil Shah</title>
 </head>
 
@@ -24,19 +25,23 @@
 
   <!-- navbar starts -->
   <header>
-    <a href="/"><img class="nameLogo" src="./assets/images/hs.png"></a></img><a href="https://www.linkedin.com/in/harshilshah721/" class="logo"> Portfolio</a>
-
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#work">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="/"><img class="nameLogo" src="./assets/images/hs.png" alt="Logo"></a>
+        <a href="https://www.linkedin.com/in/harshilshah721/" class="logo">Portfolio</a>
+      </div>
+      <div id="menu" class="fas fa-bars"></div>
+      <nav class="navbar">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- navbar ends -->
 
@@ -47,7 +52,6 @@
       <h2>Hey There!<br /> I'm Harshil <span>Shah</span></h2>
       <p>I am into <span class="typing-text"></span></p>
       <p>A passionate Full-Stack Developer based in Long Beach, CA, constantly driven to improve my skills and turning ideas into impactful solutions. I specialize in crafting seamless digital experiences through dynamic websites and applications. Let's connect and create something amazing together!</p>
-      <!-- Working for myself to improve my skills.</p> -->
 
       <div class="resume-container">
         <a href="assets/letters/Harshil-Resume.pdf" class="btn" download class="download-icon" target="_blank"
@@ -72,11 +76,9 @@
       </div>
     </div>
 
-    <!-- <div class="image-container"> -->
     <div class="image">
       <div id="lottie-animation" class="tilt"></div>
     </div>
-    <!-- </div> -->
   </section>
   <!-- hero section ends -->
 
@@ -89,7 +91,7 @@
             <h2>California State University Long Beach</h2>
           </div>
           <div class="desc">
-            <img loading="lazy" class="imgLogo" src="./assets/images/csulblogo.png" alt="CSU Logo">
+            <img class="imgLogo" src="./assets/images/csulblogo.png" alt="CSU Logo">
             <div class="text-content">
               <h3>Master of Science</h3>
               <h4>Computer Science</h4>
@@ -99,7 +101,7 @@
           </div>
           <div>
             <p class="education-p">
-              COURSEWORK : Advanced Analysis of Algorithms, Advanced Software Engineering, Advanced topics in Programming Languages
+              COURSEWORK : Advanced Analysis of Algorithms, Advanced Software Engineering, Artificial Intelligence, Advanced topics in Programming Languages
             </p>
           </div>
         </div>
@@ -141,140 +143,152 @@
               <p>PER : 92%</p>
             </div>
           </div>
-          <!-- <div>
-            <p class="education-p">
-              COURSEWORK : Physics
-            </p>
-          </div> -->
         </div>
       </div>
 
       <!-- Add more Education entries as needed -->
     </div>
-    <!-- </div> -->
   </section>
 
   <!-- skills section starts -->
   <section class="skills" id="skills">
-
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Tech <span>Stack</span></h2>
-
     <div class="container">
       <div class="row" id="skillsContainer">
-
       </div>
     </div>
   </section>
   <!-- skills section ends -->
 
-  <section class="experience" id="experience">
-
-    <h2 class="heading" style="color: #fff;"><i class="fas fa-briefcase"></i> Experience</h2>
-
-    <div class="cards-container">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-left">
-            <h1>Confidosoft Solutions</h1>
-            <h3>Jr. Software Developer</h3>
-            <h5>2023 - 2024</h5>
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="header-content">
+          <div class="briefcase-icon">💼</div>
+          <h2>Experience</h2>
+        </div>
+      </div>
+      
+      <div class="experience-card">
+        <div class="card-content">
+          <div class="left-content">
+            <div class="company-details">
+              <h3>Confidosoft Solutions</h3>
+              <div class="role">Jr. Software Developer</div>
+              <div class="timeline">2023 - 2024</div>
+            </div>
+            
+            <ul class="experience-list">
+              <li>
+                <div class="dot"></div>
+                <span>Implemented automated data extraction tools using <span class="highlight">Python</span> libraries such as <span class="highlight">Tesseract</span> and <span class="highlight">PyPDF2</span>, processing over <span class="highlight">10,000</span> PDFs monthly and reducing manual effort by <span class="highlight">40%</span>.</span>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <span>Optimized APIs performing <span class="highlight">CRUD operations</span>, simplifying complex database queries and reducing execution time by <span class="highlight">45%</span>, resulting in faster data retrieval and improved system performance.</span>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <span>Developed a sports activity management platform using <span class="highlight">Angular</span>, <span class="highlight">PostgreSQL</span> and <span class="highlight">Python</span>, enabling real-time tracking of player stats, attendance and performance, which improved usability for <span class="highlight">100</span> plus sports teams and reduced manual data entry by <span class="highlight">50%</span>.</span>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <span>Led database testing and integration across <span class="highlight">MSSQL, MySQL, Oracle DB, Informix, DB2</span> and <span class="highlight">PostgreSQL</span>, leveraging <span class="highlight">DataMapper</span> to ensure <span class="highlight">99%</span> data accuracy and alignment between systems.</span>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <span>Contributed to the deployment of <span class="highlight">Neuron ESB endpoint hosts in Docker</span>, improving integration across hybrid environments and reducing deployment time by <span class="highlight">25%</span>.</span>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <span>Customized <span class="highlight">Odoo ERP modules</span> to optimize Accounting workflows, Inventory management and HR operations, enhancing process efficiency by <span class="highlight">35%</span> and accuracy in data management.</span>
+              </li>
+            </ul>
           </div>
-          <div class="card-right">
-            <img src="./assets/images/techImg.gif" alt="Experience GIF" />
+          
+          <div class="right-content">
+            <div class="image-container">
+              <img src="./assets/images/techImg.gif" alt="Tech illustration">
+            </div>
           </div>
         </div>
-        <ul class="card-details">
-          <li>Leveraged <b>Python libraries</b>, including OCR(Optical Character Recognition) and <b>AI tools</b> like
-            <b>Tesseract and PyPDF2</b>, to automate the extraction of critical data from PDFs, accurately detecting
-            and parsing dates, time, tables and company names, significantly improving data processing efficiency.
-          </li>
-          <li>Customized <b>Odoo ERP modules</b> to enhance Accounting workflows, optimize Inventory management and
-            refine HR processes, improving overall system efficiency and data accuracy.</li>
-          <li>Optimized APIs performing <b>CRUD operations</b>, simplifying complex database queries and reducing
-            execution time by 45%, resulting in faster data retrieval and improved system performance.</li>
-          <li>Contributed to the deployment of <b>Neuron ESB endpoint hosts in Docker</b>, enhancing the scalability
-            and efficiency of integration across on-premises, cloud and hybrid environments, and facilitated the
-            automation of complex processes using Neuron ESB’s Workflow and Business Process Tools, reducing
-            deployment time.</li>
-          <li>Conducted extensive database testing and integration across <b>MSSQL, MySQL, PostgreSQL, Oracle DB,
-              Informix, DB2, and Cassandra</b> and applied <b>DataMapper</b> to align source and target fields,
-            ensuring precise data transformations and seamless system integration.</li>
-        </ul>
       </div>
-
     </div>
-
-    </div>
-
   </section>
 
   <!-- work project section starts -->
   <section class="work" id="work">
-
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects</h2>
-
-    <div class="carousel-container">
-      <div class="carousel">
-
-        <div class="project-card">
-          <h3 class="project-title">MeraPe</h3>
-          <div class="card-content">
-            <img class="project-image" src="./assets/images/merape-img.png" alt="MeraPe Project">
-            <ul class="project-description">
-              <li>Engineered a payment platform with the help of <b>React Native, CSS, JavaScript, MongoDB, NodeJS</b> and <b>Firebase</b>, enabling schools to securely register and process fee payments from parents and guardians.</li>
-              <li>Executed a discount feature with real-time notifications, offering 5% to 10% incentives for early payments while keeping users informed about payment status, deadlines and transaction history, boosting timely payments, improving cash flow and enhancing user engagement.</li>
-            </ul>
-            <a href="https://github.com/Harshil721/Merapay" class="github-link" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+    
+    <div class="projects-container">
+      <div class="project-card">
+        <h3 class="project-title">MeraPe</h3>
+        <img class="project-image" src="./assets/images/merape-img.png" alt="MeraPe Project">
+        <div class="project-content">
+          <ul class="project-description">
+            <li>Engineered a payment platform with the help of <b>React Native, CSS, JavaScript, MongoDB, NodeJS</b> and <b>Firebase</b>, enabling schools to securely register and process fee payments from parents and guardians.</li>
+            <li>Executed a discount feature with real-time notifications, offering 5% to 10% incentives for early payments while keeping users informed about payment status, deadlines and transaction history, boosting timely payments, improving cash flow and enhancing user engagement.</li>
+          </ul>
+          <a href="https://github.com/Harshil721/Merapay" class="github-link" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
         </div>
-
-        <div class="project-card">
-          <h3 class="project-title">Foodiesta</h3>
-          <div class="card-content">
-            <img class="project-image" src="./assets/images/foodiesta.png" alt="Foodiesta Project">
-            <ul class="project-description">
-              <li>Developed a visually engaging restaurant website using <b>WordPress, Elementor</b> and <b>PHP</b>, featuring dynamic layouts and intuitive navigation to showcase menus, promotions and customer reviews.</li>
-              <li>Leveraged <b>Photoshop</b> to design high-quality visuals and graphics, enhancing the overall look and feel of the web application, and ensuring a visually appealing and cohesive user interface across all devices.</li>
-            </ul>
-            <a href="https://github.com/Harshil721/Foodiesta" class="github-link" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+      </div>
+  
+      <div class="project-card">
+        <h3 class="project-title">Foodiesta</h3>
+        <img class="project-image" src="./assets/images/foodiesta.png" alt="Foodiesta Project">
+        <div class="project-content">
+          <ul class="project-description">
+            <li>Developed a visually engaging restaurant website using <b>WordPress, Elementor</b> and <b>PHP</b>, featuring dynamic layouts and intuitive navigation to showcase menus, promotions and customer reviews.</li>
+            <li>Leveraged <b>Photoshop</b> to design high-quality visuals and graphics, enhancing the overall look and feel of the web application, and ensuring a visually appealing and cohesive user interface across all devices.</li>
+          </ul>
+          <a href="https://github.com/Harshil721/Foodiesta" class="github-link" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
         </div>
-
-        <div class="project-card">
-          <h3 class="project-title">Whatsapp Clone</h3>
-          <div class="card-content">
-            <img class="project-image" src="./assets/images/whatsapp-clone.png" alt="Whatsapp Clone Project">
-            <ul class="project-description">
-              <li>Implemented a real-time messaging platform using <b>ReactJS, Node.js</b> and <b>Firebase</b>, providing seamless communication with instant delivery receipts and typing indicators.</li>
-              <li>Designed an intuitive user interface inspired by WhatsApp's original aesthetic, ensuring responsive layouts and optimized performance across various devices using <b>Bootstrap, CSS</b> and <b>Material-UI</b>.</li>
-            </ul>
-            <a href="https://github.com/Harshil721/WhatsAppClone" class="github-link" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+      </div>
+  
+      <div class="project-card">
+        <h3 class="project-title">TikTok Clone</h3>
+        <img class="project-image" src="./assets/images/tiktok_clone.png" alt="TikTok Clone Project">
+        <div class="project-content">
+          <ul class="project-description">
+            <li>Crafted an engaging and user-friendly interface using <b>React.js</b>, ensuring seamless navigation and responsive layouts across devices, while integrating real-time interactions for liking and disliking videos with <b>Firebase</b> for live data synchronization.</li>
+            <li>Designed an intuitive and visually appealing interface inspired by modern social media aesthetics, leveraging <b>Bootstrap, CSS</b> and <b>Material-UI</b> to ensure responsiveness, accessibility and a cohesive user experience across all devices.</li>
+          </ul>
+          <a href="https://github.com/Harshil721/tiktok-clone" class="github-link" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
         </div>
+      </div>
 
+      <div class="project-card">
+        <h3 class="project-title">Whatsapp Clone</h3>
+        <img class="project-image" src="./assets/images/whatsapp-clone.png" alt="Whatsapp Clone Project">
+        <div class="project-content">
+          <ul class="project-description">
+            <li>Implemented a real-time messaging platform using <b>ReactJS, Node.js</b> and <b>Firebase</b>, providing seamless communication with instant delivery receipts and typing indicators.</li>
+            <li>Designed an intuitive user interface inspired by WhatsApp's original aesthetic, ensuring responsive layouts and optimized performance across various devices using <b>Bootstrap, CSS</b> and <b>Material-UI</b>.</li>
+          </ul>
+          <a href="https://github.com/Harshil721/WhatsAppClone" class="github-link" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
+        </div>
       </div>
     </div>
-
   </section>
   <!-- work project section ends -->
 
   <!-- contact section starts -->
   <section class="contact" id="contact">
-
     <h2 class="heading"><i class="fas fa-headset"></i> Get in <span style="color: aquamarine;">Touch</span></h2>
-
     <div class="container">
       <div class="content">
         <div class="image-box">
           <div id="email-animation"></div>
         </div>
-        <form action="https://formsubmit.co/harshilshah2107@gmail.com" method="POST" id="contact-form">
+        <form action="https://formsubmit.co/14391998ef6fe282751af3a85d700f39" method="POST">
           <div class="form-group">
             <div class="field">
               <input type="text" name="name" placeholder="Name" required>
@@ -295,11 +309,10 @@
           </div>
           <div class="button-area">
             <button type="submit">
-              Submit <i class="fa fa-paper-plane"></i>
+              Submit 
             </button>
           </div>
         </form>
-        
       </div>
     </div>
   </section>
@@ -354,21 +367,6 @@
   <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
   <!-- scroll back to top -->
 
-  <script>
-    const carousel = document.querySelector('.carousel');
-    const cards = document.querySelectorAll('.project-card');
-    let index = 0;
-
-    function showNextCard() {
-      index = (index + 1) % cards.length; // Loop back to the first card after the last one
-      const offset = -index * 100; // Calculate translation offset
-      carousel.style.transform = `translateX(${offset}%)`;
-    }
-
-    // Slide every 5 seconds
-    setInterval(showNextCard, 5000);
-  </script>
-
   <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
   <!-- jquery cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -382,9 +380,6 @@
 
   <!-- particle.js links -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
-
-  <!-- Email json link -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.6.0/dist/email.min.js"></script>
 
   <script>
     // Load the JSON animation using Lottie
@@ -415,19 +410,11 @@
     const emailAnimationContainer = document.getElementById('email-animation');
     emailAnimationContainer.style.width = '400px';
     emailAnimationContainer.style.height = '395px';
-    // animationContainer.style.marginLeft = '50px';
     
   </script>
 
-  <!-- vanilla tilt.js links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <!-- scroll reveal anim -->
   <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
 
   <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 

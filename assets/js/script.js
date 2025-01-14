@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById("menu");
+    const navbar = document.querySelector(".navbar");
+
+    menu.addEventListener("click", function () {
+        navbar.classList.toggle("nav-toggle");
+    });
+});
+
+
 $(document).ready(function () {
 
     $('#menu').click(function () {
@@ -36,38 +46,7 @@ $(document).ready(function () {
             scrollTop: $($(this).attr('href')).offset().top,
         }, 500, 'linear')
     });
-
-    // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
-    // <!-- emailjs to mail contact form data -->
-
 });
-
-document.addEventListener('visibilitychange',
-    function () {
-        if (document.visibilityState === "visible") {
-            document.title = "Harshil Shah";
-            $("#favicon").attr("href", "assets/images/favicon.png");
-        }
-        else {
-            document.title = "Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
-        }
-    });
-
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
@@ -164,6 +143,15 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 });
 // <!-- tilt js effect ends -->
 
+window.addEventListener('resize', function() {
+    const navbar = document.querySelector('.navbar');
+    const menuBtn = document.querySelector('#menu');
+    if (window.innerWidth > 768) {
+      navbar.classList.remove('nav-toggle');
+      menuBtn.classList.remove('fa-times');
+    }
+  });
+
 // disable developer mode
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
@@ -200,116 +188,47 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
-    duration: 1000,
+    duration: 500,
     reset: true
 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
-srtop.reveal('.education .timeline', { delay: 400 });
-srtop.reveal('.education .timeline .container', { interval: 400 });
+srtop.reveal('.education .timeline', { delay: 200 });
+srtop.reveal('.education .timeline .container', { interval: 200 });
 
 const srside = ScrollReveal({
     origin: 'side',
     distance: '80px',
-    duration: 1000,
+    duration: 200,
     reset: true
 });
 
 /* SCROLL HOME */
-srside.reveal('.home .content h3', { delay: 400 });
-srside.reveal('.home .content p', { delay: 400 });
-srside.reveal('.home .content .btn', { delay: 400 });
+srside.reveal('.home .content h3', { delay: 200 });
+srside.reveal('.home .content p', { delay: 200 });
+srside.reveal('.home .content .btn', { delay: 200 });
 
-srside.reveal('.home .image', { delay: 400 });
-srside.reveal('.home .linkedin', { interval: 600 });
-srside.reveal('.home .github', { interval: 800 });
-srside.reveal('.home .twitter', { interval: 1000 });
-srside.reveal('.home .telegram', { interval: 600 });
-srside.reveal('.home .instagram', { interval: 600 });
-srside.reveal('.home .email', { interval: 600 });
-srside.reveal('.home .dev', { interval: 600 });
+srside.reveal('.home .image', { delay: 200 });
+srside.reveal('.home .linkedin', { interval: 200 });
+srside.reveal('.home .github', { interval: 200 });
+srside.reveal('.home .twitter', { interval: 200 });
+srside.reveal('.home .telegram', { interval: 200 });
+srside.reveal('.home .instagram', { interval: 200 });
+srside.reveal('.home .email', { interval: 200 });
+srside.reveal('.home .dev', { interval: 200 });
 
 /* SCROLL SKILLS */
-srside.reveal('.skills .container', { interval: 800 });
-srside.reveal('.skills .container .bar', { delay: 800 });
+srside.reveal('.skills .container', { interval: 200 });
+srside.reveal('.skills .container .bar', { delay: 200 });
 
 /* SCROLL PROJECTS */
-srside.reveal('.work .box', { interval: 800 });
+srside.reveal('.work .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
-srside.reveal('.experience', { delay: 800 });
-srside.reveal('.experience .container', { interval: 800 });
+srside.reveal('.experience', { delay: 200 });
+srside.reveal('.experience .container', { interval: 200 });
 
 /* SCROLL CONTACT */
-srside.reveal('.contact .container', { delay: 800 });
-srside.reveal('.contact .container .form-group', { delay: 800 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".card");
-  
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          }
-        });
-      },
-      { threshold: 0.8 }
-    );
-  
-    cards.forEach((card) => observer.observe(card));
-  });  
-
-  const projectCards = [
-    {
-      image: 'assets/images/project1.gif',
-      link: 'https://github.com/Harshil721/project1',
-      name: 'Project 1 Name',
-      description: 'A brief description of Project 1 that highlights its key features and purpose.'
-    },
-    {
-      image: 'assets/images/project2.gif',
-      link: 'https://github.com/Harshil721/project2',
-      name: 'Project 2 Name',
-      description: 'A brief description of Project 2 that highlights its key features and purpose.'
-    },
-    {
-      image: 'assets/images/project3.gif',
-      link: 'https://github.com/Harshil721/project3',
-      name: 'Project 3 Name',
-      description: 'A brief description of Project 3 that highlights its key features and purpose.'
-    }
-  ];
-  
-  const projectSlider = document.querySelector('.project-slider');
-  let currentIndex = 0;
-  
-  function updateProjectCard() {
-    const card = document.querySelector('#project-card');
-    const project = projectCards[currentIndex];
-  
-    card.querySelector('.project-image img').src = project.image;
-    card.querySelector('.github-link').href = project.link;
-    card.querySelector('.github-link').innerHTML = `<i class="fab fa-github"></i> ${project.name}`;
-    card.querySelector('h3').textContent = project.name;
-    card.querySelector('p').textContent = project.description;
-  
-    // Move to next index
-    currentIndex = (currentIndex + 1) % projectCards.length;
-  
-    // Add slide animation
-    card.classList.remove('active');
-    setTimeout(() => card.classList.add('active'), 50);
-  }
-  
-  // Initialize slider
-  updateProjectCard();
-  setInterval(updateProjectCard, 5000);
-  
-  AOS.init({
-    duration: 1000, // Animation duration in ms
-    once: false,    // Allow animations to trigger every time the section is revisited
-  });
-  
+srside.reveal('.contact .container', { delay: 200 });
+srside.reveal('.contact .container .form-group', { delay: 200 });
