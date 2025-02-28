@@ -14,7 +14,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon -->
-  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon1.avif" type="image/x-png">
   
   <title>Harshil Shah</title>
 </head>
@@ -150,13 +150,23 @@
   </section>
 
   <!-- skills section starts -->
-  <section class="skills" id="skills">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Tech <span>Stack</span></h2>
-    <div class="container">
-      <div class="row" id="skillsContainer">
-      </div>
-    </div>
-  </section>
+  <section class="tech-stack-section" id="skills">
+    <h2 class="tech-stack-heading">Tech <span>Stack</span></h2>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+    <button class="filter-btn" data-filter="database">Database</button>
+    <button class="filter-btn" data-filter="tools">Tools</button>
+  </div>
+
+  <!-- Container for all skills (cards) -->
+  <div class="skills-container" id="skillsContainer">
+    <!-- Cards will be injected here by JavaScript -->
+  </div>
+</section>
   <!-- skills section ends -->
 
   <section class="experience-section" id="experience">
@@ -220,29 +230,58 @@
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects</h2>
     
     <div class="projects-container">
+      <div class="projects-container">
+        <div class="project-card">
+          <h3 class="project-title">Urban Mobility System</h3>
+          <img class="project-image" src="./assets/images/ums.png" alt="UMS Project">
+          <div class="project-content">
+            <ul class="project-description">
+              <li>Developed a machine learning pipeline using <b style="color: rgb(7, 237, 64);">Python, scikit-learn</b> and <b style="color: rgb(7, 237, 64);">pandas</b> to predict traffic
+                patterns by integrating real-time traffic and weather data, enhancing prediction reliability through
+                iterative model optimization.</li>
+              <li>Designed an asynchronous data collection system using <b style="color: rgb(7, 237, 64);">asyncio</b> and <b style="color: rgb(7, 237, 64);">aiohttp</b> that reduced API latency by
+                60% for real-time data streaming across multiple cities.</li>
+              <li>Automated end-to-end workflows including data preprocessing, model training and visualization,
+                reducing manual intervention by <b style="color: rgb(7, 237, 64);">40%</b> and enabling rapid experimentation cycles.</li>
+              <li>Collaborated on interactive dashboard development using <b style="color: rgb(7, 237, 64);">Matplotlib</b> and <b style="color: rgb(7, 237, 64);">Seaborn</b> to visualize model
+                insights, highlighting correlations between weather anomalies and traffic congestion hotspots.</li>
+            </ul>
+            <a href="https://github.com/Harshil721/urban_mobility_system" class="github-link" target="_blank">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Flix Finder</h3>
+          <img class="project-image" src="./assets/images/flix_finder.png" alt="Flix Finder Project">
+          <div class="project-content">
+            <ul class="project-description">
+              <li>Developed a content-based recommendation engine using <b style="color: rgb(7, 237, 64);">natural language processing</b> and <b style="color: rgb(7, 237, 64);">cosine</b>
+                similarity to analyze movie tags, delivering personalized top recommendations based on genre and plot
+                relevance.</li>
+              <li>Designed and deployed an interactive web application with <b style="color: rgb(7, 237, 64);">Streamlit</b>, integrating real-time movie
+                poster retrieval via TMDB API to enhance user experience through visually engaging dynamic
+                suggestions.</li>
+              <li>Optimized feature engineering by merging textual data from movie overviews and genres, improving
+                model efficiency through dimensionality reduction with <b style="color: rgb(7, 237, 64);">scikit-learn</b> and seamless serialization using
+                <b style="color: rgb(7, 237, 64);">pickle</b>.</li>
+            </ul>
+            <a href="https://github.com/Harshil721/flix_finder" class="github-link" target="_blank">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
+        </div>
+
       <div class="project-card">
         <h3 class="project-title">MeraPe</h3>
         <img class="project-image" src="./assets/images/merape-img.png" alt="MeraPe Project">
         <div class="project-content">
           <ul class="project-description">
-            <li>Engineered a payment platform with the help of <b>React Native, CSS, JavaScript, MongoDB, NodeJS</b> and <b>Firebase</b>, enabling schools to securely register and process fee payments from parents and guardians.</li>
+            <li>Engineered a payment platform with the help of <b style="color: rgb(7, 237, 64);">React Native, CSS, JavaScript, MongoDB, NodeJS</b> and <b style="color: rgb(7, 237, 64);">Firebase</b>, enabling schools to securely register and process fee payments from parents and guardians.</li>
             <li>Executed a discount feature with real-time notifications, offering 5% to 10% incentives for early payments while keeping users informed about payment status, deadlines and transaction history, boosting timely payments, improving cash flow and enhancing user engagement.</li>
           </ul>
           <a href="https://github.com/Harshil721/Merapay" class="github-link" target="_blank">
-            <i class="fab fa-github"></i> View Project
-          </a>
-        </div>
-      </div>
-  
-      <div class="project-card">
-        <h3 class="project-title">Foodiesta</h3>
-        <img class="project-image" src="./assets/images/foodiesta.png" alt="Foodiesta Project">
-        <div class="project-content">
-          <ul class="project-description">
-            <li>Developed a visually engaging restaurant website using <b>WordPress, Elementor</b> and <b>PHP</b>, featuring dynamic layouts and intuitive navigation to showcase menus, promotions and customer reviews.</li>
-            <li>Leveraged <b>Photoshop</b> to design high-quality visuals and graphics, enhancing the overall look and feel of the web application, and ensuring a visually appealing and cohesive user interface across all devices.</li>
-          </ul>
-          <a href="https://github.com/Harshil721/Foodiesta" class="github-link" target="_blank">
             <i class="fab fa-github"></i> View Project
           </a>
         </div>
@@ -253,10 +292,24 @@
         <img class="project-image" src="./assets/images/tiktok_clone.png" alt="TikTok Clone Project">
         <div class="project-content">
           <ul class="project-description">
-            <li>Crafted an engaging and user-friendly interface using <b>React.js</b>, ensuring seamless navigation and responsive layouts across devices, while integrating real-time interactions for liking and disliking videos with <b>Firebase</b> for live data synchronization.</li>
-            <li>Designed an intuitive and visually appealing interface inspired by modern social media aesthetics, leveraging <b>Bootstrap, CSS</b> and <b>Material-UI</b> to ensure responsiveness, accessibility and a cohesive user experience across all devices.</li>
+            <li>Crafted an engaging and user-friendly interface using <b style="color: rgb(7, 237, 64);">React.js</b>, ensuring seamless navigation and responsive layouts across devices, while integrating real-time interactions for liking and disliking videos with <b style="color: rgb(7, 237, 64);">Firebase</b> for live data synchronization.</li>
+            <li>Designed an intuitive and visually appealing interface inspired by modern social media aesthetics, leveraging <b style="color: rgb(7, 237, 64);">Bootstrap, CSS</b> and <b style="color: rgb(7, 237, 64);">Material-UI</b> to ensure responsiveness, accessibility and a cohesive user experience across all devices.</li>
           </ul>
           <a href="https://github.com/Harshil721/tiktok-clone" class="github-link" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Foodiesta</h3>
+        <img class="project-image" src="./assets/images/foodiesta.png" alt="Foodiesta Project">
+        <div class="project-content">
+          <ul class="project-description">
+            <li>Developed a visually engaging restaurant website using <b style="color: rgb(7, 237, 64);">WordPress, Elementor</b> and <b style="color: rgb(7, 237, 64);">PHP</b>, featuring dynamic layouts and intuitive navigation to showcase menus, promotions and customer reviews.</li>
+            <li>Leveraged <b style="color: rgb(7, 237, 64);">Photoshop</b> to design high-quality visuals and graphics, enhancing the overall look and feel of the web application, and ensuring a visually appealing and cohesive user interface across all devices.</li>
+          </ul>
+          <a href="https://github.com/Harshil721/Foodiesta" class="github-link" target="_blank">
             <i class="fab fa-github"></i> View Project
           </a>
         </div>
@@ -267,8 +320,8 @@
         <img class="project-image" src="./assets/images/whatsapp-clone.png" alt="Whatsapp Clone Project">
         <div class="project-content">
           <ul class="project-description">
-            <li>Implemented a real-time messaging platform using <b>ReactJS, Node.js</b> and <b>Firebase</b>, providing seamless communication with instant delivery receipts and typing indicators.</li>
-            <li>Designed an intuitive user interface inspired by WhatsApp's original aesthetic, ensuring responsive layouts and optimized performance across various devices using <b>Bootstrap, CSS</b> and <b>Material-UI</b>.</li>
+            <li>Implemented a real-time messaging platform using <b style="color: rgb(7, 237, 64);">ReactJS, Node.js</b> and <b style="color: rgb(7, 237, 64);">Firebase</b>, providing seamless communication with instant delivery receipts and typing indicators.</li>
+            <li>Designed an intuitive user interface inspired by WhatsApp's original aesthetic, ensuring responsive layouts and optimized performance across various devices using <b style="color: rgb(7, 237, 64);">Bootstrap, CSS</b> and <b style="color: rgb(7, 237, 64);">Material-UI</b>.</li>
           </ul>
           <a href="https://github.com/Harshil721/WhatsAppClone" class="github-link" target="_blank">
             <i class="fab fa-github"></i> View Project

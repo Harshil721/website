@@ -68,21 +68,147 @@ async function fetchData(type = "skills") {
     return data;
 }
 
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach((skill, index) => {
-        const animationDirection = index % 2 === 0 ? "left" : "right"; // Alternate between left and right
-        skillHTML += `
-        <div class="bar" data-animation="${animationDirection}" style="animation-delay: ${index * 0.2}s;">
-            <div class="info">
-                <img src="${skill.icon}" alt="${skill.name}" />
-                <span>${skill.name}</span>
-            </div>
-        </div>`;
-    });
-    skillsContainer.innerHTML = skillHTML;
+/***************************************************************************/
+/** NEW FILTER-BASED TECH STACK CODE ***************************************/
+/***************************************************************************/
+
+/* 1) Category Mapping */
+const categoryMap = {
+  frontend: [
+    "HTML5", "CSS3", "JavaScript", "TypeScript", "ReactJS", "Next.js",
+    "Angular", "MaterialUI", "Bootstrap", "TailwindCSS", "Sass", "Redux"
+  ],
+  backend: [
+    "Node.js", "Python", "Java", "Spring Boot", "Django"
+  ],
+  database: [
+    "MongoDB", "PostgreSQL", "MySQL", "MSSQL", "OracleDB"
+  ],
+  tools: [
+    "AWS", "Firebase", "GCP", "GitHub"
+  ]
+};
+
+/* 2) Helper to find category by skill name */
+function getCategory(skillName) {
+  skillName = skillName.toLowerCase();
+  for (const cat in categoryMap) {
+    if (categoryMap[cat].some(s => s.toLowerCase() === skillName)) {
+      return cat;
+    }
+  }
+  return "other"; // fallback if none matched
 }
+
+/* 3) Initialize Skills After DOM Loaded */
+document.addEventListener("DOMContentLoaded", () => {
+  // We fetch the skills JSON
+  fetchData("skills")
+    .then(skillsData => {
+      // Build skill cards
+      const skillsContainer = document.getElementById("skillsContainer");
+
+      skillsData.forEach(skill => {
+        const category = getCategory(skill.name);
+
+        // Create card element
+        const card = document.createElement("div");
+        card.classList.add("skill-card");
+        card.setAttribute("data-category", category);
+
+        // Icon
+        const icon = document.createElement("img");
+        icon.src = skill.icon;
+        icon.alt = skill.name;
+        icon.classList.add("skill-icon");
+
+        // Name
+        const skillName = document.createElement("h3");
+        skillName.textContent = skill.name;
+
+        // Progress bar container
+        const progressBarContainer = document.createElement("div");
+        progressBarContainer.classList.add("progress-bar-container");
+
+        // Progress label
+        const progressLabel = document.createElement("span");
+        progressLabel.classList.add("progress-label");
+        // progressLabel.textContent = skill.level + "%";
+
+        // Track
+        const progressTrack = document.createElement("div");
+        progressTrack.classList.add("progress-track");
+
+        // Fill
+        const progressFill = document.createElement("div");
+        progressFill.classList.add("progress-fill");
+        // progressFill.style.width = skill.level + "%";
+
+        progressTrack.appendChild(progressFill);
+        progressBarContainer.appendChild(progressLabel);
+        progressBarContainer.appendChild(progressTrack);
+
+        // Description
+        const skillDesc = document.createElement("p");
+        skillDesc.classList.add("skill-desc");
+        skillDesc.textContent = skill.description || "";
+
+        // Append all
+        card.appendChild(icon);
+        card.appendChild(skillName);
+        card.appendChild(progressBarContainer);
+        card.appendChild(skillDesc);
+
+        skillsContainer.appendChild(card);
+      });
+
+      // Now that cards exist, set default filter to "all"
+      filterSkills("all");
+    })
+    .catch(err => {
+      console.error("Error loading skills.json:", err);
+    });
+
+  // Grab filter buttons
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove 'active' from all
+      filterButtons.forEach(b => b.classList.remove("active"));
+      // Add to current
+      btn.classList.add("active");
+
+      // Filter value
+      const filterValue = btn.getAttribute("data-filter");
+      filterSkills(filterValue);
+    });
+  });
+});
+
+/* 4) Filter Function */
+function filterSkills(category) {
+  const allCards = document.querySelectorAll(".skill-card");
+  allCards.forEach(card => {
+    if (category === "all") {
+      card.style.display = "block";
+    } else {
+      const cardCat = card.getAttribute("data-category");
+      card.style.display = (cardCat === category) ? "block" : "none";
+    }
+  });
+}
+
+// Optional: Add hover effect on cards
+document.addEventListener('mousemove', (e) => {
+    document.querySelectorAll('.skill-card-front').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+    });
+});
 
 // Fetch and display skills
 fetchData("skills").then(showSkills);

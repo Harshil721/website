@@ -1,122 +1,133 @@
 [
     {
         "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-    {
-        "name": "Spring Boot",
-        "icon": "https://img.icons8.com/color/48/000000/spring-logo.png"
-    },
-    {
-        "name": "Django",
-        "icon": "https://img.icons8.com/color/48/000000/django.png"
-    },
-    {
-        "name": "Angular",
-        "icon": "https://img.icons8.com/color/48/000000/angularjs.png"
-    },
-    {
-        "name": "SQL",
-        "icon": "https://img.icons8.com/color/48/000000/sql.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
+        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png",
+       
+        "description": "Expert in React with extensive experience in hooks, context, and advanced state management"
     },
     {
         "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Next.js",
-        "icon": "https://img.icons8.com/color/48/000000/nextjs.png"
-    },
-    {
-        "name": "GCP",
-        "icon": "https://img.icons8.com/color/48/000000/google-cloud.png"
-    },
-    {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
-    },
-    {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
-    },
-    {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
-    },
-    {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
-    },
-    {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
-    },
-    {
-        "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-        "name": "Sass",
-        "icon": "https://img.icons8.com/color/48/000000/sass.png"
-    },
-    {
-        "name": "PHP",
-        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
+        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png",
+        "description": "Advanced JavaScript development including ES6+, async programming, and modern patterns"
     },
     {
         "name": "TypeScript",
-        "icon": "https://img.icons8.com/color/48/000000/typescript.png"
+        "icon": "https://img.icons8.com/color/48/000000/typescript.png",
+        "description": "Strong expertise in TypeScript for building scalable applications with static typing"
     },
     {
-        "name": "WordPress",
-        "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
+        "name": "Next.js",
+        "icon": "https://img.icons8.com/color/48/000000/nextjs.png",
+        "description": "Proficient in server-side rendering and static site generation with Next.js"
+    },
+    {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png",
+        "description": "Expert in Python development including data processing and backend development"
+    },
+    {
+        "name": "Node.js",
+        "icon": "https://img.icons8.com/color/48/000000/nodejs.png",
+        "description": "Strong backend development skills with Node.js and Express.js"
+    },
+    {
+        "name": "AWS",
+        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png",
+        "description": "Experienced in cloud architecture and deployment using AWS services"
+    },
+    {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/color/48/000000/mongodb.png",
+        "description": "Proficient in NoSQL database design and optimization with MongoDB"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png",
+        "description": "Advanced SQL database management and optimization skills"
+    },
+    {
+        "name": "Redux",
+        "icon": "https://img.icons8.com/color/48/000000/redux.png",
+        "description": "Expert in state management with Redux and Redux Toolkit"
+    },
+    {
+        "name": "TailwindCSS",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png",
+        "description": "Advanced styling and responsive design using Tailwind CSS"
+    },
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png",
+        "description": "Expert in semantic HTML and modern web standards"
+    },
+    {
+        "name": "CSS3",
+        "icon": "https://img.icons8.com/color/48/000000/css3.png",
+        "description": "Advanced CSS including animations, Grid, and Flexbox"
+    },
+    {
+        "name": "Java",
+        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
+        "description": "Strong Java development skills with Spring Boot framework"
+    },
+    {
+        "name": "Spring Boot",
+        "icon": "https://img.icons8.com/color/48/000000/spring-logo.png",
+        "description": "Experienced in building RESTful APIs with Spring Boot"
+    },
+    {
+        "name": "Firebase",
+        "icon": "https://img.icons8.com/color/48/000000/firebase.png",
+        "description": "Proficient in Firebase services including Auth, Firestore, and Hosting"
+    },
+    {
+        "name": "GCP",
+        "icon": "https://img.icons8.com/color/48/000000/google-cloud.png",
+        "description": "Experience with Google Cloud Platform services and deployment"
+    },
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png",
+        "description": "Advanced version control and collaboration using Git and GitHub"
+    },
+    {
+        "name": "Angular",
+        "icon": "https://img.icons8.com/color/48/000000/angularjs.png",
+        "description": "Experienced in building single-page applications with Angular"
+    },
+    {
+        "name": "MaterialUI",
+        "icon": "https://img.icons8.com/color/48/000000/material-ui.png",
+        "description": "Proficient in building responsive UIs with Material Design"
+    },
+    {
+        "name": "Bootstrap",
+        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png",
+        "description": "Expert in rapid prototyping and responsive design with Bootstrap"
+    },
+    {
+        "name": "Sass",
+        "icon": "https://img.icons8.com/color/48/000000/sass.png",
+        "description": "Advanced CSS preprocessing and modular styling with Sass"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png",
+        "description": "Proficient in relational database design and optimization"
+    },
+    {
+        "name": "Django",
+        "icon": "https://img.icons8.com/color/48/000000/django.png",
+        "description": "Strong experience in building scalable web applications with Django"
+    },
+    {
+        "name": "OracleDB",
+        "icon": "https://img.icons8.com/color/48/000000/oracle-logo.png",
+        "description": "Proficient in Oracle database design, PL/SQL, and performance tuning"
+    },
+    {
+        "name": "MSSQL",
+        "icon": "https://img.icons8.com/color/48/000000/microsoft-sql-server.png",
+        "description": "Experience in Microsoft SQL Server, T-SQL, and stored procedures"
     }
 ]
