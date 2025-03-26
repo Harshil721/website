@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Frontend Development", "Backend Development", "Web Designing", "Android Development", "Web Development"],
+    strings: ["Machine Learning", "Frontend Development", "Backend Development", "Web Designing", "Android Development", "Web Development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
