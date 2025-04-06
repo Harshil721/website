@@ -76,16 +76,16 @@ async function fetchData(type = "skills") {
 const categoryMap = {
   frontend: [
     "HTML5", "CSS3", "JavaScript", "TypeScript", "ReactJS", "Next.js",
-    "Angular", "MaterialUI", "Bootstrap", "TailwindCSS", "Sass", "Redux"
+    "Angular", "MaterialUI", "Bootstrap", "TailwindCSS", "Sass", "Redux", "Streamlit"
   ],
   backend: [
-    "Node.js", "Python", "Java", "Spring Boot", "Django"
+    "NumPy", "Pytorch", "TensorFlow", "Spring Boot", "Django", "Kafka", "Java", "Python", "Spark", "Node.js"
   ],
   database: [
     "MongoDB", "PostgreSQL", "MySQL", "MSSQL", "OracleDB"
   ],
   tools: [
-    "AWS", "Firebase", "GCP", "GitHub"
+    "AWS", "Firebase", "GCP", "GitHub", "Docker", "Kubernetes", "Jenkins", "GitHub Actions"
   ]
 };
 

@@ -11,6 +11,61 @@
         "description": "Advanced JavaScript development including ES6+, async programming, and modern patterns"
     },
     {
+        "name": "Pytorch",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PyTorch_logo_icon.svg/48px-PyTorch_logo_icon.svg.png",
+        "description": "Experienced in building deep learning models and neural networks with PyTorch"
+      },
+      {
+        "name": "TensorFlow",
+        "icon": "https://img.icons8.com/color/48/000000/tensorflow.png",
+        "description": "Proficient in machine learning and deep learning projects using TensorFlow"
+      },
+      {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/color/48/000000/docker.png",
+        "description": "Skilled in containerizing applications using Docker"
+      },
+      {
+        "name": "Kafka",
+        "icon": "https://cdn.worldvectorlogo.com/logos/kafka.svg",
+        "description": "Experienced with real-time data streaming using Apache Kafka"
+      },
+      {
+        "name": "Kubernetes",
+        "icon": "https://img.icons8.com/color/48/000000/kubernetes.png",
+        "description": "Skilled in deploying and managing containerized applications on Kubernetes"
+      },
+      {
+        "name": "Pandas",
+        "icon": "https://img.icons8.com/color/48/000000/pandas.png",
+        "description": "Expert in data manipulation and analysis using Pandas"
+      },
+      {
+        "name": "NumPy",
+        "icon": "https://img.icons8.com/color/48/000000/numpy.png",
+        "description": "Proficient in numerical computations and array processing with NumPy"
+      },
+      {
+        "name": "Spark",
+        "icon": "https://img.icons8.com/color/48/000000/apache-spark.png",
+        "description": "Experienced in big data processing and analytics with Apache Spark"
+      },
+      {
+        "name": "Streamlit",
+        "icon": "https://streamlit.io/images/brand/streamlit-mark-color.png",
+        "description": "Proficient in quickly developing interactive web applications using Streamlit"
+      },
+      {
+        "name": "Jenkins",
+        "icon": "https://img.icons8.com/color/48/000000/jenkins.png",
+        "description": "Experienced in CI/CD pipelines and automation using Jenkins"
+      },
+      {
+        "name": "GitHub Actions",
+        "icon": "https://img.icons8.com/ios-filled/48/ffffff/github.png",
+        "description": "Skilled in automating build, test, and deployment workflows using GitHub Actions"
+      },
+    {
         "name": "TypeScript",
         "icon": "https://img.icons8.com/color/48/000000/typescript.png",
         "description": "Strong expertise in TypeScript for building scalable applications with static typing"
