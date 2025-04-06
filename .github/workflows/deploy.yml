@@ -15,18 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      # Set up Node.js (assuming your website needs it)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      
-      # Install dependencies and build the project
-      - name: Install dependencies
-        run: |
-          npm install
-          npm run build
-      
       # Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
